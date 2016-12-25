@@ -1,0 +1,71 @@
+switches DSIN $00
+switches2 DSIN $01
+; buttons  DSIN $02
+LEDS 	   DSOUT $03
+LEDS2 	   DSOUT $04
+; segments DSOUT $04
+
+
+; Declaring switches and leds
+sw EQU $00
+sw2 EQU $01
+led EQU $03
+led2 EQU $04
+
+i EQU s2
+
+a EQU s0
+b EQU s1
+
+
+IN a, sw
+IN b, sw2
+
+LOAD s3, a
+AND s3, $3F
+;LOAD s4, b
+;AND s4, $3F
+
+LOAD s4, b
+SR0 s4
+SR0 s4
+AND s4, $3F
+
+CALL mult_soft
+LOAD a, s6
+LOAD b, s5
+
+OUT a, led
+OUT b, led2
+
+JUMP 000
+
+
+
+
+; Rotina: mult_soft
+; 		Função: Multipplica 8 bits(sem sinal)
+; 			-Registradores de Entrada:
+; 				s3: multiplicando
+; 				s4 : multiplicador
+; 			-Registradores de Saída:
+; 				s5: byte mais significativo do produto
+; 		 		s6 : byte menos significativo do produto
+; 			-Registradores Temporarios: i
+
+mult_soft:
+                    LOAD      s5, 0               ; limpa s5
+                    LOAD      i, 8                ; inicializa o contador
+mult_loop:
+                    SR0       s4                  ; desloca o lsb para o carry
+                    JUMP      NC, shift_prod      ; lsb é 0
+                    ADD       s5, s3              ; lsb é 1
+shift_prod:
+                    SRA       s5                  ; desloca o byte mais sgnificativo para direita,
+; carry para MSB, LSB para carry
+                    SRA       s6                  ; desloca o byte menos sgnificativo para direita,
+; lsb de s5 para MSB de s6
+                    SUB       i, 1                ; decrementa o contador
+                    JUMP      NZ, mult_loop       ; repete até i=O
+                    RET
+

@@ -1,0 +1,96 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+Process ID: 1880
+
+Current time: 	12/24/16 9:38:38 PM BRST
+Time zone: 	Brasilia Time (America/Sao_Paulo)
+
+OS: Windows 10
+Version: 10.0
+Architecture: amd64
+Available processors (cores): 2
+
+Screen size: 1920x1200
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.2/tps/win64/jre
+
+User name: 	Alexandre
+User home directory: C:/Users/Alexandre
+User working directory: C:/Users/Alexandre/Desktop/SD2_LAB/Relatorio 4/project_4
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: C:/Xilinx/Vivado
+RDI Data directory: C:/Xilinx/Vivado/2016.2/data
+RDI Bin directory: C:/Xilinx/Vivado/2016.2/bin
+
+Vivado preferences path: C:/Users/Alexandre/AppData/Roaming/Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: C:/Users/Alexandre/AppData/Roaming/Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	165 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 471 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\Alexandre\Desktop\SD2_LAB\Relatorio 4\project_4\project_4.xpr. Version: Vivado v2016.2 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 35 MB (+33979kb) [00:00:06]
+// [Engine Memory]: 393 MB (+260938kb) [00:00:06]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 37 MB (+605kb) [00:00:07]
+// [Engine Memory]: 427 MB (+14156kb) [00:00:07]
+// [GUI Memory]: 46 MB (+7130kb) [00:00:08]
+// [Engine Memory]: 452 MB (+4413kb) [00:00:09]
+// [GUI Memory]: 49 MB (+1013kb) [00:00:09]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project {C:/Users/Alexandre/Desktop/SD2_LAB/Relatorio 4/project_4/project_4.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'. 
+// [Engine Memory]: 484 MB (+9475kb) [00:00:11]
+// HMemoryUtils.trashcanNow. Engine heap size: 484 MB. GUI used memory: 38 MB. Current time: 12/24/16 9:38:39 PM BRST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 54 MB (+2390kb) [00:00:13]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: project_4; location: C:/Users/Alexandre/Desktop/SD2_LAB/Relatorio 4/project_4; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 692.898 ; gain = 105.426 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (Shifter.vhd) elapsed time: 0.2s
+// [GUI Memory]: 57 MB (+475kb) [00:00:19]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, jtag_loader_6 - Behavioral (Shifter.vhd)]", 2, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, jtag_loader_6 - Behavioral (Shifter.vhd)]", 2, false); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, global_top - Behavioral (global_top.vhd)]", 1); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, global_top - Behavioral (global_top.vhd), TOP1 - top - Behavioral (top.vhd)]", 2, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, global_top - Behavioral (global_top.vhd), TOP1 - top - Behavioral (top.vhd)]", 2, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// [GUI Memory]: 61 MB (+1351kb) [00:00:25]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, global_top - Behavioral (global_top.vhd), TOP1 - top - Behavioral (top.vhd), processor - kcpsm6 - low_level_definition (kcpsm6.vhd)]", 3, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, global_top - Behavioral (global_top.vhd), TOP1 - top - Behavioral (top.vhd), processor - kcpsm6 - low_level_definition (kcpsm6.vhd)]", 3, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+selectCodeEditor("kcpsm6.vhd", 144, 234); // bH:N (JPanel:JComponent, cv:JFrame)
+// [GUI Memory]: 65 MB (+769kb) [00:01:34]
+// [GUI Memory]: 70 MB (+1741kb) [00:01:49]
+// [GUI Memory]: 74 MB (+302kb) [00:03:35]
+// [GUI Memory]: 78 MB (+417kb) [00:07:31]
+// HMemoryUtils.trashcanNow. Engine heap size: 498 MB. GUI used memory: 40 MB. Current time: 12/24/16 10:41:15 PM BRST
+// [GUI Memory]: 82 MB (+450kb) [01:11:48]

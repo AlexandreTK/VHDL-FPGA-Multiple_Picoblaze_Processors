@@ -1,0 +1,97 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Fri Nov 25 09:30:38 2016
+| Host         : DESKTOP-7FAJQ9S running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file global_top_control_sets_placed.rpt
+| Design       : global_top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    44 |
+| Unused register locations in slices containing registers |   118 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             184 |           49 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              84 |           30 |
+| Yes          | No                    | No                     |             140 |           42 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              42 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+----------------+
+|                            Clock Signal                           |                                            Enable Signal                                           |                                            Set/Reset Signal                                           | Slice Load Count | Bel Load Count |
++-------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  TOP1/program_rom/instantiate_loader.jtag_loader_6_inst/CLK       |                                                                                                    |                                                                                                       |                1 |              1 |
+|  TOP2/program_rom/instantiate_loader.jtag_loader_6_inst/CLK       |                                                                                                    |                                                                                                       |                1 |              1 |
+|  TOP3/program_rom/instantiate_loader.jtag_loader_6_inst/CLK       |                                                                                                    |                                                                                                       |                1 |              1 |
+|  clk_IBUF_BUFG                                                    | TOP3/processor/CE                                                                                  | TOP3/processor/R                                                                                      |                1 |              2 |
+|  clk_IBUF_BUFG                                                    | TOP2/processor/CE                                                                                  | TOP2/processor/R                                                                                      |                2 |              2 |
+|  clk_IBUF_BUFG                                                    | TOP1/processor/CE                                                                                  | TOP1/processor/R                                                                                      |                1 |              2 |
+|  TOP1/program_rom/instantiate_loader.jtag_loader_6_inst/CLK       |                                                                                                    | TOP1/program_rom/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int[7]_i_1_n_0    |                1 |              4 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    | TOP3/processor/active_interrupt_flop_n_0                                                              |                2 |              4 |
+|  TOP2/program_rom/instantiate_loader.jtag_loader_6_inst/CLK       |                                                                                                    | TOP2/program_rom/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int[7]_i_1__0_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    | TOP2/processor/active_interrupt_flop_n_0                                                              |                1 |              4 |
+|  TOP3/program_rom/instantiate_loader.jtag_loader_6_inst/CLK       |                                                                                                    | TOP3/program_rom/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int[7]_i_1__1_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    | TOP1/processor/active_interrupt_flop_n_0                                                              |                2 |              4 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    | TOP2/processor/R                                                                                      |                3 |              6 |
+|  clk_IBUF_BUFG                                                    | TOP3/processor/E[1]                                                                                |                                                                                                       |                2 |              6 |
+|  clk_IBUF_BUFG                                                    | TOP1/processor/E[1]                                                                                |                                                                                                       |                1 |              6 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    | TOP3/processor/R                                                                                      |                3 |              6 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    | TOP1/processor/R                                                                                      |                3 |              6 |
+|  clk_IBUF_BUFG                                                    | TOP2/processor/E[1]                                                                                |                                                                                                       |                2 |              8 |
+|  clk_IBUF_BUFG                                                    | TOP3/processor/spm_enable_flop_n_0                                                                 |                                                                                                       |                2 |              8 |
+|  clk_IBUF_BUFG                                                    | TOP3/processor/E[0]                                                                                |                                                                                                       |                3 |              8 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    | TOP1/program_rom/instruction[7]                                                                       |                3 |              8 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    | TOP3/program_rom/instruction[7]                                                                       |                2 |              8 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    | TOP2/program_rom/instruction[7]                                                                       |                3 |              8 |
+|  clk_IBUF_BUFG                                                    | TOP1/processor/spm_enable_flop_n_0                                                                 |                                                                                                       |                2 |              8 |
+|  clk_IBUF_BUFG                                                    | TOP1/processor/E[0]                                                                                |                                                                                                       |                3 |              8 |
+|  clk_IBUF_BUFG                                                    | TOP2/processor/spm_enable_flop_n_0                                                                 |                                                                                                       |                2 |              8 |
+|  clk_IBUF_BUFG                                                    | TOP2/processor/E[0]                                                                                |                                                                                                       |                4 |              8 |
+|  clk_IBUF_BUFG                                                    | TOP2/processor/I3                                                                                  | TOP2/processor/R                                                                                      |                3 |             12 |
+|  clk_IBUF_BUFG                                                    | TOP1/processor/I3                                                                                  | TOP1/processor/R                                                                                      |                3 |             12 |
+|  clk_IBUF_BUFG                                                    | TOP3/processor/I3                                                                                  | TOP3/processor/R                                                                                      |                3 |             12 |
+|  TOP1/program_rom/instantiate_loader.jtag_loader_6_inst/shift_clk | TOP1/program_rom/instantiate_loader.jtag_loader_6_inst/shift                                       |                                                                                                       |                4 |             14 |
+|  TOP3/program_rom/instantiate_loader.jtag_loader_6_inst/shift_clk | TOP3/program_rom/instantiate_loader.jtag_loader_6_inst/shift                                       |                                                                                                       |                3 |             14 |
+|  TOP2/program_rom/instantiate_loader.jtag_loader_6_inst/shift_clk | TOP2/program_rom/instantiate_loader.jtag_loader_6_inst/shift                                       |                                                                                                       |                3 |             14 |
+|  clk_IBUF_BUFG                                                    | TOP2/processor/I3                                                                                  |                                                                                                       |                2 |             16 |
+|  clk_IBUF_BUFG                                                    | TOP1/processor/WE                                                                                  |                                                                                                       |                2 |             16 |
+|  clk_IBUF_BUFG                                                    | TOP2/processor/WE                                                                                  |                                                                                                       |                2 |             16 |
+|  clk_IBUF_BUFG                                                    | TOP3/processor/WE                                                                                  |                                                                                                       |                2 |             16 |
+|  clk_IBUF_BUFG                                                    | TOP1/processor/I3                                                                                  |                                                                                                       |                2 |             16 |
+|  clk_IBUF_BUFG                                                    | TOP3/processor/I3                                                                                  |                                                                                                       |                2 |             16 |
+|  TOP1/program_rom/instantiate_loader.jtag_loader_6_inst/shift_clk | TOP1/program_rom/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.jtag_din_int[17]_i_1_n_0    |                                                                                                       |                6 |             18 |
+|  TOP2/program_rom/instantiate_loader.jtag_loader_6_inst/shift_clk | TOP2/program_rom/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.jtag_din_int[17]_i_1__0_n_0 |                                                                                                       |                5 |             18 |
+|  TOP3/program_rom/instantiate_loader.jtag_loader_6_inst/shift_clk | TOP3/program_rom/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.jtag_din_int[17]_i_1__1_n_0 |                                                                                                       |                6 |             18 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    | U1/clear                                                                                              |                5 |             18 |
+|  clk_IBUF_BUFG                                                    |                                                                                                    |                                                                                                       |               46 |            181 |
++-------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

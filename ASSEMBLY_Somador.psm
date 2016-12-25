@@ -1,0 +1,38 @@
+switches DSIN $00
+switches2 DSIN $01
+; buttons  DSIN $02
+LEDS 	   DSOUT $03
+LEDS2 	   DSOUT $04
+; segments DSOUT $04
+
+
+; Declaring switches and leds
+sw EQU $00
+sw2 EQU $01
+led EQU $03
+led2 EQU $04
+
+
+a EQU s0
+b EQU s1
+car EQU s2
+LOAD car, $0
+
+IN a, sw
+IN b, sw2
+
+AND a, $3F
+SR0 b
+SR0 b
+AND b, $3F
+
+ADD a, b
+JUMP NC, not_overflow
+ADD car, 1
+not_overflow:
+
+
+OUT a, led
+OUT car, led2
+
+JUMP 000

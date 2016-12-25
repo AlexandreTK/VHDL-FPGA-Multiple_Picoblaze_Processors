@@ -1,0 +1,94 @@
+; Inputs and Outputs
+switches DSIN $00
+switches2 DSIN $01
+; buttons  DSIN $02
+LEDS 	   DSOUT $03
+LEDS2 	   DSOUT $04
+; segments DSOUT $04
+
+
+; Declaring switches and leds
+sw EQU $00
+sw2 EQU $01
+led EQU $03
+led2 EQU $04
+
+; Declaring Variables
+a EQU s0
+a2 EQU s6
+b EQU s1
+i EQU s2
+inv EQU s3
+dir EQU s4
+aux EQU s5
+
+; Loading a
+IN aux, sw
+LOAD a, aux
+AND a, $3F
+LOAD a2, $0
+
+; Loading b
+IN aux, sw2
+LOAD b, aux
+AND b, $3F
+
+; Loading dir
+IN aux, sw2
+LOAD dir, aux
+AND dir, $40
+
+; Loading inv
+IN aux, sw2
+LOAD inv, aux
+AND inv, $80
+
+TEST inv, inv
+JUMP Z, not_inverse
+LOAD aux, $FF
+SUB aux, a
+LOAD a, aux
+LOAD aux, $FF
+SUB aux, a2
+LOAD a2, aux
+
+not_inverse:
+
+TEST dir, dir
+JUMP Z, direita
+
+loop_left:
+TEST b, b
+JUMP Z, end_shift
+;SL0 a
+
+SL0 a2
+SL0 a
+
+JUMP NC, not_overflow
+ADD a2, 1
+not_overflow:
+
+
+
+SUB b, 1
+JUMP loop_left
+
+JUMP end_shift
+direita:
+
+loop_right:
+TEST b, b
+JUMP Z, end_shift
+SR0 a
+SUB b, 1
+JUMP loop_right
+
+end_shift:
+
+OUT a, led
+OUT a2, led2
+
+JUMP 000
+
+
